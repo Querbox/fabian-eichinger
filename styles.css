@@ -1,14 +1,14 @@
 :root {
-  --bg-color: #fafafa;
+  --bg-color: #F3F4F6;
+  /* Light gray/blueish background for contrast */
+  --card-bg: #FFFFFF;
   --text-color: #1a1a1a;
   --accent-color: #00897B;
-  /* Teal / Mint-ish */
-  --light-gray: #e0e0e0;
-  --white: #ffffff;
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --spacing-section: 4rem;
-  --spacing-element: 1.5rem;
-  --container-width: 800px;
+  --secondary-text: #666;
+  --border-radius: 32px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --font-main: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --spacing-container: 2rem;
 }
 
 * {
@@ -23,138 +23,214 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   font-size: 1.1rem;
-  -webkit-font-smoothing: antialiased;
+  padding: var(--spacing-container);
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
+/* Page Container - Constraints width */
+.page-wrapper {
+  max-width: 1200px;
+  width: 100%;
 }
 
-/* Typography */
-h1,
-h2,
-h3 {
-  margin-bottom: var(--spacing-element);
-  font-weight: 700;
-  line-height: 1.2;
+/* Bento Grid Layout */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.5rem;
+  grid-auto-rows: min-content;
 }
 
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
+/* Generic Card Style */
+.card-section,
+.bento-item {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  box-shadow: var(--card-shadow);
 }
 
-h2 {
-  font-size: 1.8rem;
-  border-bottom: 2px solid var(--accent-color);
-  display: inline-block;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+/* Specific Areas */
+
+/* Hero: Spans full width initially */
+.hero-card {
+  grid-column: span 12;
+  text-align: center;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: var(--spacing-element);
-  color: #333;
-}
-
-/* Sections */
-header.hero {
-  padding: 6rem 0 4rem;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--light-gray);
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  max-width: 800px;
 }
 
 .hero-intro {
-  font-size: 1.4rem;
-  color: #444;
-  max-width: 650px;
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-main section {
-  padding: var(--spacing-section) 0;
+/* About: Spans 7 columns */
+.about-card {
+  grid-column: span 7;
 }
 
-/* Services / Cards */
-.cards-grid {
+/* Personal: Spans 5 columns */
+.personal-card {
+  grid-column: span 5;
+  background-color: #1a1a1a;
+  /* Dark card for contrast */
+  color: #fff;
+}
+
+.personal-card h2 {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.personal-card p {
+  color: #ccc;
+}
+
+/* Services: Spans full width */
+.services-card {
+  grid-column: span 12;
+}
+
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border-color: var(--accent-color);
-}
-
-/* Philosophy List */
-.principles-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.principles-list li {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.principles-list li::before {
-  content: "•";
-  color: var(--accent-color);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-/* Footer */
-footer {
-  background-color: #111;
-  color: #aaa;
-  padding: 4rem 0;
+  gap: 2rem;
   margin-top: 2rem;
+}
+
+.service-item {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* LinkedIn Card: Spans 6 columns */
+.linkedin-card {
+  grid-column: span 6;
+  background-color: #0077b5;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.linkedin-card:hover {
+  opacity: 0.9;
+}
+
+.linkedin-card h2 {
+  color: white;
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+.linkedin-btn {
+  background: white;
+  color: #0077b5;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Philosophy: Spans 6 columns */
+.philosophy-card {
+  grid-column: span 6;
+}
+
+/* Footer: Spans full width */
+.footer-card {
+  grid-column: span 12;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+  padding: 2rem;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--secondary-text);
+  text-decoration: none;
+  margin: 0 10px;
   font-size: 0.9rem;
 }
 
-footer p {
-  color: #aaa;
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Typography elements */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+p {
   margin-bottom: 1rem;
+  color: var(--secondary-text);
+  font-weight: 400;
 }
 
-.copyright {
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  opacity: 0.7;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-section,
+  .bento-item {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
+/* Utility for legal pages */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .hero-intro {
-    font-size: 1.2rem;
-  }
-
-  :root {
-    --spacing-section: 3rem;
-  }
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
 }
