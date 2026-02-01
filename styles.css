@@ -382,6 +382,103 @@ p {
   color: var(--text-primary);
 }
 
+/* --- RESUME SECTIONS --- */
+.resume-card {
+  grid-column: span 12;
+}
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.resume-item {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.resume-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resume-logo-wrapper {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  /* Center the logo inside */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.resume-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+  /* Padding for the image inside the box */
+}
+
+.resume-content {
+  flex-grow: 1;
+}
+
+.resume-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.resume-meta {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.resume-content p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resume-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.resume-content ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.resume-skills {
+  font-size: 0.9rem !important;
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #444 !important;
+}
+
+.resume-quote {
+  font-style: italic;
+  color: #555 !important;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1rem;
+}
+
 /* Specific Utilities */
 .back-link {
   display: inline-flex;
