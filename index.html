@@ -38,16 +38,20 @@
     <div class="bento-grid">
 
       <!-- Hero Section -->
-      <header class="bento-item hero-card">
+      <header class="bento-item hero-card fade-in-up" style="--delay: 1;">
+        <div class="hero-image-wrapper floating-anim">
+          <!-- Placeholder color/image until user provides one -->
+          <div class="hero-placeholder">F</div>
+          <!-- <img src="path-to-image.jpg" alt="Fabian Eichinger" class="hero-img"> -->
+        </div>
         <h1>Fabian Eichinger<br>Video & Social Media Content Creator</h1>
         <p class="hero-intro">
-          Klarer Content. Modernes Design. Visuelles Storytelling.<br>
-          Ohne unnötigen Schnickschnack.
+          Klarer Content. Modernes Design. Visuelles Storytelling.
         </p>
       </header>
 
       <!-- About Section -->
-      <section class="bento-item about-card" id="ueber-mich">
+      <section class="bento-item about-card fade-in-up" id="ueber-mich" style="--delay: 2;">
         <h2>Über mich</h2>
         <p>
           Ich bin Video Content Creator mit Schwerpunkt auf Social Media. Ich unterstütze Marken und Unternehmen dabei,
@@ -56,7 +60,7 @@
       </section>
 
       <!-- Personal Section (Dark Card) -->
-      <section class="bento-item personal-card" id="persoenlich">
+      <section class="bento-item personal-card fade-in-up" id="persoenlich" style="--delay: 3;">
         <h2>Persönliche Note</h2>
         <p>
           Ich arbeite konzentriert, detailverliebt und ruhig. Mir ist wichtig, dass Content ehrlich wirkt
@@ -65,7 +69,7 @@
       </section>
 
       <!-- Services Section -->
-      <section class="bento-item services-card" id="portfolio">
+      <section class="bento-item services-card fade-in-up" id="portfolio" style="--delay: 4;">
         <h2>Was ich mache</h2>
         <div class="services-grid">
           <div class="service-item">
@@ -89,14 +93,14 @@
 
       <!-- LinkedIn Integration -->
       <a href="https://www.linkedin.com/in/fabian-eichinger-video-content/recent-activity/all/" target="_blank"
-        class="bento-item linkedin-card" id="linkedin">
+        class="bento-item linkedin-card fade-in-up" id="linkedin" style="--delay: 5;">
         <h2>Aktuelles auf LinkedIn</h2>
         <p>Entdecke meine neuesten Beiträge und Projekte.</p>
         <span class="linkedin-btn">Zum Profil &rarr;</span>
       </a>
 
       <!-- Philosophy Section -->
-      <section class="bento-item philosophy-card" id="haltung">
+      <section class="bento-item philosophy-card fade-in-up" id="haltung" style="--delay: 6;">
         <h2>Arbeitsweise</h2>
         <p><strong>Klarheit statt Überladung.</strong></p>
         <p><strong>Storytelling vor Effekten.</strong></p>
@@ -104,11 +108,12 @@
       </section>
 
       <!-- Footer -->
-      <footer class="bento-item footer-card">
+      <footer class="footer-card fade-in-up" style="--delay: 7;">
         <p>&copy;
           <script>document.write(new Date().getFullYear())</script> Fabian Eichinger
         </p>
-        <div class="footer-links">
+        <!-- Update class to match new CSS hook -->
+        <div class="footer-nav">
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
