@@ -424,13 +424,60 @@ p {
   color: #bbb !important;
 }
 
+/* --- FOOTER & ICONS --- */
+.check-icon {
+  width: 1.25em;
+  height: 1.25em;
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  vertical-align: text-bottom;
+}
+
+.resume-content ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  display: flex;
+  /* Better alignment for icon */
+  align-items: flex-start;
+}
+
 /* Utils */
+/* Footer Contrast */
 .footer-card {
   grid-column: span 12;
   text-align: center;
-  background: transparent;
-  border: none;
   padding-top: 6rem;
+  padding-bottom: 4rem;
+  color: #bdbdbd;
+  /* Lighter than text-secondary */
+}
+
+.footer-nav {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.08);
+  /* More visible background */
+  padding: 0.5rem;
+  border-radius: var(--radius-pill);
+  gap: 0.5rem;
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  /* High contrast text */
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.footer-nav a:hover {
+  background-color: var(--accent-color);
+  color: #000;
 }
 
 .fade-in-up {
