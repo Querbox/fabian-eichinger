@@ -677,7 +677,7 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   color: var(--text-primary);
 }
@@ -685,7 +685,7 @@ p {
 .theme-toggle:hover {
   transform: translateY(-2px);
   border-color: var(--accent-color);
-  box-shadow: 0 6px 16px rgba(255,102,0,0.2);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.2);
 }
 
 .theme-icon {
@@ -704,89 +704,112 @@ html.light-mode body {
   --text-secondary: #555555;
 
   /* The user asked for "noch knalliger" orange to prevent it from looking pink in light mode */
-  --accent-color: #FF5A00; 
+  --accent-color: #FF5A00;
   --accent-hover: #E65100;
   --accent-glow: rgba(255, 90, 0, 0.15);
 }
 
-html.light-mode-ignore .blob-1, html.light-mode-pre body .blob-1 {
+html.light-mode-ignore .blob-1,
+html.light-mode-pre body .blob-1 {
   background: #FF6600;
 }
-html.light-mode-ignore .blob-2, html.light-mode-pre body .blob-2 {
-  background: #FF8800; /* Yellow-Orange instead of red to avoid pink */
+
+html.light-mode-ignore .blob-2,
+html.light-mode-pre body .blob-2 {
+  background: #FF8800;
+  /* Yellow-Orange instead of red to avoid pink */
 }
-html.light-mode-ignore .blob-3, html.light-mode-pre body .blob-3 {
+
+html.light-mode-ignore .blob-3,
+html.light-mode-pre body .blob-3 {
   background: #FF9900;
 }
 
-html.light-mode-ignore .blob, html.light-mode-pre body .blob {
+html.light-mode-ignore .blob,
+html.light-mode-pre body .blob {
   opacity: 0.25;
   filter: blur(120px);
 }
 
-html.light-mode-ignore .marquee-container, html.light-mode-pre body .marquee-container {
+html.light-mode-ignore .marquee-container,
+html.light-mode-pre body .marquee-container {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-html.light-mode-ignore .bento-item, html.light-mode-pre body .bento-item,
-html.light-mode-ignore .card-section, html.light-mode-pre body .card-section {
+html.light-mode-ignore .bento-item,
+html.light-mode-pre body .bento-item,
+html.light-mode-ignore .card-section,
+html.light-mode-pre body .card-section {
   box-shadow: var(--card-shadow);
 }
 
-html.light-mode-ignore .bento-item:hover, html.light-mode-pre body .bento-item:hover {
+html.light-mode-ignore .bento-item:hover,
+html.light-mode-pre body .bento-item:hover {
   border-color: var(--accent-color);
   box-shadow: 0 20px 40px -10px rgba(255, 90, 0, 0.15);
 }
 
-html.light-mode-ignore .hero-image-wrapper, html.light-mode-pre body .hero-image-wrapper {
+html.light-mode-ignore .hero-image-wrapper,
+html.light-mode-pre body .hero-image-wrapper {
   border: 4px solid #FFFFFF;
 }
 
-html.light-mode-ignore .personal-card, html.light-mode-pre body .personal-card {
+html.light-mode-ignore .personal-card,
+html.light-mode-pre body .personal-card {
   background: linear-gradient(135deg, rgba(255, 90, 0, 0.08), rgba(255, 255, 255, 0.8));
 }
 
-html.light-mode-ignore .service-item, html.light-mode-pre body .service-item {
+html.light-mode-ignore .service-item,
+html.light-mode-pre body .service-item {
   background: rgba(0, 0, 0, 0.02);
 }
 
-html.light-mode-ignore .service-item:hover, html.light-mode-pre body .service-item:hover {
+html.light-mode-ignore .service-item:hover,
+html.light-mode-pre body .service-item:hover {
   background: #FFFFFF;
 }
 
-html.light-mode-ignore .linkedin-btn, html.light-mode-pre body .linkedin-btn {
+html.light-mode-ignore .linkedin-btn,
+html.light-mode-pre body .linkedin-btn {
   background: #FFFFFF;
   color: var(--accent-color);
 }
 
-html.light-mode-ignore .resume-item, html.light-mode-pre body .resume-item {
+html.light-mode-ignore .resume-item,
+html.light-mode-pre body .resume-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-html.light-mode-ignore .resume-skills, html.light-mode-pre body .resume-skills {
+html.light-mode-ignore .resume-skills,
+html.light-mode-pre body .resume-skills {
   background: rgba(0, 0, 0, 0.03);
   color: #444 !important;
 }
 
-html.light-mode-ignore .resume-quote, html.light-mode-pre body .resume-quote {
+html.light-mode-ignore .resume-quote,
+html.light-mode-pre body .resume-quote {
   color: #555 !important;
 }
 
-html.light-mode-ignore .footer-card, html.light-mode-pre body .footer-card {
+html.light-mode-ignore .footer-card,
+html.light-mode-pre body .footer-card {
   color: #777777;
 }
 
-html.light-mode-ignore .footer-nav, html.light-mode-pre body .footer-nav {
+html.light-mode-ignore .footer-nav,
+html.light-mode-pre body .footer-nav {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-html.light-mode-ignore .footer-nav a, html.light-mode-pre body .footer-nav a {
+html.light-mode-ignore .footer-nav a,
+html.light-mode-pre body .footer-nav a {
   color: #333333;
 }
 
-html.light-mode-ignore .footer-nav a:hover, html.light-mode-pre body .footer-nav a:hover {
+html.light-mode-ignore .footer-nav a:hover,
+html.light-mode-pre body .footer-nav a:hover {
   background-color: var(--accent-color);
   color: #FFF;
 }
@@ -794,7 +817,8 @@ html.light-mode-ignore .footer-nav a:hover, html.light-mode-pre body .footer-nav
 /* --- CLEAN MINIMAL LAYOUT (SCREENSHOT INSPIRED) --- */
 
 .content-wrapper {
-  max-width: 800px; /* Narrower column like the screenshot */
+  max-width: 800px;
+  /* Narrower column like the screenshot */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -809,7 +833,7 @@ html.light-mode-ignore .footer-nav a:hover, html.light-mode-pre body .footer-nav
   --card-border: #EAEAEA;
   --text-primary: #111111;
   --text-secondary: #666666;
-  --accent-color: #FF5A00; 
+  --accent-color: #FF5A00;
   --radius-card: 16px;
   --spacing-md: 2rem;
   --font-heading: 'Outfit', sans-serif;
@@ -826,10 +850,15 @@ html.dark-mode body {
 
 body {
   background-color: var(--bg-color);
-  background-image: none; /* Removed tech grid */
+  background-image: none;
+  /* Removed tech grid */
 }
 
-.blob-cont { display: none; } /* Removed blobs for cleaner look */
+.blob-cont {
+  display: none;
+}
+
+/* Removed blobs for cleaner look */
 
 /* Nav */
 .top-nav {
@@ -841,7 +870,7 @@ body {
   border: 1px solid var(--card-border);
   border-radius: 99px;
   margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .nav-links {
@@ -857,7 +886,8 @@ body {
   transition: 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--text-primary);
 }
 
@@ -901,7 +931,8 @@ html.dark-mode .button-primary:hover {
   margin-bottom: 2rem;
   border: none;
   box-shadow: none;
-  animation: none; /* Removed floating */
+  animation: none;
+  /* Removed floating */
 }
 
 .hero-section h1 {
@@ -1010,7 +1041,7 @@ section h2 {
 .service-item:hover {
   transform: translateY(-3px);
   border-color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* LinkedIn Integration */
@@ -1036,7 +1067,7 @@ section h2 {
 }
 
 .linkedin-card p {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .linkedin-card:hover {
@@ -1063,10 +1094,13 @@ section h2 {
 
 
 /* Icons / Theme */
-.theme-toggle .theme-icon { stroke: var(--text-primary); }
+.theme-toggle .theme-icon {
+  stroke: var(--text-primary);
+}
 
 /* Update active nav states to orange */
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--accent-color);
 }
 
@@ -1082,9 +1116,43 @@ section h2 {
 
 /* Services items cleaner */
 .service-item {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .service-item h3 {
   font-size: 1.1rem;
+}
+
+/* Base Mobile Optimization for Linear Layout */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .content-wrapper {
+    gap: 3.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

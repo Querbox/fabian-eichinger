@@ -35,14 +35,14 @@
 
   <!-- Schema.org JSON-LD for AI-SEO -->
   <script type="application/ld+json">
-    {
+    [{
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Fabian Eichinger",
       "jobTitle": "Video Content Creator & Social Media Content Creator",
-      "description": "Video Content Creator mit Schwerpunkt auf Social Media, visuellen Konzepten und Storytelling.",
+      "description": "Video Content Creator in Hechingen, Germany, spezialisiert auf Videoproduktion, Social Media Content, Reels, TikToks, visuelle Konzepte und Storytelling.",
       "url": "https://fabian-eichinger.de",
-      "knowsAbout": ["Videoproduktion", "Social Media Content", "Video Editing", "Visuelles Storytelling", "Social Ads"],
+      "knowsAbout": ["Videoproduktion", "Social Media Content", "Video Editing", "Content Creation", "Visuelles Storytelling", "Social Ads", "Marketing"],
       "workLocation": {
         "@type": "Place",
         "name": "Germany" 
@@ -50,8 +50,26 @@
       "sameAs": [
         "https://www.linkedin.com/in/fabian-eichinger-video-content"
       ]
-    }
-    </script>
+    }, {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Welche Art von Video Content erstellst du?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ich produziere kurzweiligen, ansprechenden Social Media Content wie Reels, TikToks und Video-Ads. Der Fokus liegt auf visuellem Storytelling, das Marken authentisch präsentiert."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Bietest du auch Social-Media-Strategien an?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja! Neben der reinen Videoproduktion entwickle ich Konzepte und Redaktionspläne, analysiere Trends und optimiere den Content für maximale Reichweite und Engagement."
+        }
+      }]
+    }]
+  </script>
   <script>
     // Prevent flickering by setting mode before rendering
     if (localStorage.getItem('theme') === 'dark') {
@@ -95,13 +113,14 @@
 
         <!-- Navigation -->
         <nav class="top-nav fade-in-up" style="--delay: 0.5;">
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="#portfolio">Work</a>
-                <a href="#ueber-mich">About</a>
-                <a href="#experience">CV</a>
-            </div>
-            <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Kontaktieren</a>
+          <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="#portfolio">Work</a>
+            <a href="#ueber-mich">About</a>
+            <a href="#experience">CV</a>
+            <a href="#blog">Blog</a>
+          </div>
+          <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Kontaktieren</a>
         </nav>
 
         <!-- Hero Section -->
@@ -111,18 +130,15 @@
           </div>
           <h1>Hallo, ich bin Fabian Eichinger.<br>Video & Social Media Content Creator</h1>
           <p class="hero-intro">
-             Ich bin Video Content Creator mit Schwerpunkt auf Social Media, visuellen Konzepten und Storytelling. <br>
-             Klarer Content. Modernes Design. Visuelles Storytelling.
+            Ich bin Video Content Creator mit Schwerpunkt auf Social Media, visuellen Konzepten und Storytelling. <br>
+            Klarer Content. Modernes Design. Visuelles Storytelling.
           </p>
           <div class="hero-actions">
             <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Zusammenarbeiten</a>
-            <div class="availability-badge">
-              <span class="dot"></span> Verfügbar für neue Projekte
-            </div>
           </div>
         </header>
 
-        
+
 
         <!-- About Section -->
         <section class="about-section fade-in-up" id="ueber-mich" style="--delay: 2;">
@@ -164,12 +180,12 @@
 
         <!-- LinkedIn Integration -->
         <div class="linkedin-wrapper fade-in-up" style="--delay: 5;">
-            <a href="https://www.linkedin.com/in/fabian-eichinger-video-content/recent-activity/all/" target="_blank"
-              class="linkedin-card" id="linkedin">
-              <h2>Aktuelles auf LinkedIn</h2>
-              <p>Entdecke meine neuesten Beiträge und Projekte.</p>
-              <span class="linkedin-btn">Zum Profil &rarr;</span>
-            </a>
+          <a href="https://www.linkedin.com/in/fabian-eichinger-video-content/recent-activity/all/" target="_blank"
+            class="linkedin-card" id="linkedin">
+            <h2>Aktuelles auf LinkedIn</h2>
+            <p>Entdecke meine neuesten Beiträge und Projekte.</p>
+            <span class="linkedin-btn">Zum Profil &rarr;</span>
+          </a>
         </div>
 
         <!-- Work Experience Section -->
@@ -294,6 +310,76 @@
               </div>
             </div>
 
+          </div>
+        </section>
+
+        <!-- FAQ / SEO Section -->
+        <section class="about-section fade-in-up" id="faq" style="--delay: 5.5;">
+          <div class="about-content">
+            <h2>Häufige Fragen (FAQ)</h2>
+            <div class="faq-item" style="margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Welche Art von Video
+                Content erstellst du?</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Ich produziere kurzweiligen, ansprechenden
+                Social Media Content wie Reels, TikToks und Video-Ads. Der Fokus liegt auf visuellem Storytelling, das
+                Marken authentisch präsentiert und direkt die Zielgruppe anspricht.</p>
+            </div>
+            <div class="faq-item" style="margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Warum ist visuelles
+                Storytelling im Marketing wichtig?</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Reines werbliches "Schreien" funktioniert
+                nicht mehr gut. Echtes Storytelling baut hingegen Vertrauen auf. Durch smarte, ehrliche Visualisierungen
+                binde ich deine Zielgruppe nachhaltig an deine Marke oder dein Unternehmen.</p>
+            </div>
+            <div class="faq-item" style="margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Bietest du auch
+                Social-Media-Strategien an?</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Ja! Neben der High-End Videoproduktion und
+                dem Schnitt (Editing) entwickle ich durchdachte Content-Konzepte und Redaktionspläne. Wir analysieren
+                gemeinsam Trends und optimieren den publizierten Content für maximale organische Reichweite und
+                Engagement.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="about-section fade-in-up" id="blog" style="--delay: 5.8;">
+          <div class="about-content">
+            <h2>Neueste Insights & Artikel</h2>
+            <p>Einblicke in meine Arbeit, Social Media Content Strategien und Video Editing Tipps.</p>
+            <div class="blog-grid"
+              style="display: grid; gap: 1rem; margin-top:1.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+              <a href="blog-storytelling.html" class="blog-card"
+                style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <h3
+                  style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
+                  Warum gutes Storytelling auf Social Media wichtiger ist als je zuvor</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Reine Werbung reicht
+                  nicht mehr aus. Ein Einblick in ehrliches Content Marketing.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                  lesen &rarr;</span>
+              </a>
+              <a href="blog-video-editing-trends.html" class="blog-card"
+                style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <h3
+                  style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
+                  3 Video-Editing Trends für 2026, die du kennen musst</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Wie schnelle Schnitte
+                  und visuelle Klarheit die Aufmerksamkeitsspanne dominieren.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                  lesen &rarr;</span>
+              </a>
+              <a href="blog-markenaufbau.html" class="blog-card"
+                style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <h3
+                  style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
+                  Authentischer Markenaufbau durch Kurzvideos (Reels)</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Mach deine Brand
+                  greifbar – mit scroll-stoppendem Design und Fokus.</p>
+                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                  lesen &rarr;</span>
+              </a>
+            </div>
           </div>
         </section>
 
