@@ -678,3 +678,134 @@ p {
     background: rgba(0, 0, 0, 0.03);
   }
 }
+
+/* --- THEME TOGGLE BUTTON --- */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 16px rgba(255,102,0,0.2);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- LIGHT MODE OVERRIDES --- */
+body.light-mode, html.light-mode-pre body {
+  --bg-color: #F4F4F6;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.04);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+
+  --text-primary: #1A1A1A;
+  --text-secondary: #555555;
+
+  /* The user asked for "noch knalliger" orange to prevent it from looking pink in light mode */
+  --accent-color: #FF5A00; 
+  --accent-hover: #E65100;
+  --accent-glow: rgba(255, 90, 0, 0.15);
+}
+
+body.light-mode .blob-1, html.light-mode-pre body .blob-1 {
+  background: #FF6600;
+}
+body.light-mode .blob-2, html.light-mode-pre body .blob-2 {
+  background: #FF8800; /* Yellow-Orange instead of red to avoid pink */
+}
+body.light-mode .blob-3, html.light-mode-pre body .blob-3 {
+  background: #FF9900;
+}
+
+body.light-mode .blob, html.light-mode-pre body .blob {
+  opacity: 0.25;
+  filter: blur(120px);
+}
+
+body.light-mode .marquee-container, html.light-mode-pre body .marquee-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .bento-item, html.light-mode-pre body .bento-item,
+body.light-mode .card-section, html.light-mode-pre body .card-section {
+  box-shadow: var(--card-shadow);
+}
+
+body.light-mode .bento-item:hover, html.light-mode-pre body .bento-item:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px -10px rgba(255, 90, 0, 0.15);
+}
+
+body.light-mode .hero-image-wrapper, html.light-mode-pre body .hero-image-wrapper {
+  border: 4px solid #FFFFFF;
+}
+
+body.light-mode .personal-card, html.light-mode-pre body .personal-card {
+  background: linear-gradient(135deg, rgba(255, 90, 0, 0.08), rgba(255, 255, 255, 0.8));
+}
+
+body.light-mode .service-item, html.light-mode-pre body .service-item {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .service-item:hover, html.light-mode-pre body .service-item:hover {
+  background: #FFFFFF;
+}
+
+body.light-mode .linkedin-btn, html.light-mode-pre body .linkedin-btn {
+  background: #FFFFFF;
+  color: var(--accent-color);
+}
+
+body.light-mode .resume-item, html.light-mode-pre body .resume-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .resume-skills, html.light-mode-pre body .resume-skills {
+  background: rgba(0, 0, 0, 0.03);
+  color: #444 !important;
+}
+
+body.light-mode .resume-quote, html.light-mode-pre body .resume-quote {
+  color: #555 !important;
+}
+
+body.light-mode .footer-card, html.light-mode-pre body .footer-card {
+  color: #777777;
+}
+
+body.light-mode .footer-nav, html.light-mode-pre body .footer-nav {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .footer-nav a, html.light-mode-pre body .footer-nav a {
+  color: #333333;
+}
+
+body.light-mode .footer-nav a:hover, html.light-mode-pre body .footer-nav a:hover {
+  background-color: var(--accent-color);
+  color: #FFF;
+}
