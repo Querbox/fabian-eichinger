@@ -862,15 +862,24 @@ body {
 
 /* Nav */
 .top-nav {
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
   border-radius: 99px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+html.dark-mode .top-nav {
+  background: rgba(17, 17, 17, 0.75);
 }
 
 .nav-links {
@@ -1126,16 +1135,31 @@ section h2 {
 /* Base Mobile Optimization for Linear Layout */
 @media (max-width: 768px) {
   .top-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
     padding: 1rem;
-    border-radius: 20px;
+    gap: 1rem;
+    border-radius: 24px;
+    align-items: stretch;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 1.25rem;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .top-nav .button-primary {
+    text-align: center;
+    width: 100%;
   }
 
   .hero-section h1 {

@@ -114,13 +114,13 @@
         <!-- Navigation -->
         <nav class="top-nav fade-in-up" style="--delay: 0.5;">
           <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="#portfolio">Work</a>
-            <a href="#ueber-mich">About</a>
-            <a href="#experience">CV</a>
+            <a href="index.html" class="active">Startseite</a>
+            <a href="#portfolio">Leistungen</a>
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#experience">Lebenslauf</a>
             <a href="#blog">Blog</a>
           </div>
-          <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Kontaktieren</a>
+          <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Kontakt</a>
         </nav>
 
         <!-- Hero Section -->
@@ -347,38 +347,94 @@
           <div class="about-content">
             <h2>Neueste Insights & Artikel</h2>
             <p>Einblicke in meine Arbeit, Social Media Content Strategien und Video Editing Tipps.</p>
+
+            <div class="blog-filter" style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+              <button class="filter-btn active" onclick="filterBlog('all')"
+                style="padding: 0.4rem 1rem; border-radius: 99px; border: 1px solid var(--card-border); background: var(--text-primary); color: var(--bg-color); cursor: pointer; font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; transition: 0.2s;">Alle</button>
+              <button class="filter-btn" onclick="filterBlog('strategy')"
+                style="padding: 0.4rem 1rem; border-radius: 99px; border: 1px solid var(--card-border); background: transparent; color: var(--text-secondary); cursor: pointer; font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; transition: 0.2s;">Strategie</button>
+              <button class="filter-btn" onclick="filterBlog('editing')"
+                style="padding: 0.4rem 1rem; border-radius: 99px; border: 1px solid var(--card-border); background: transparent; color: var(--text-secondary); cursor: pointer; font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; transition: 0.2s;">Editing</button>
+            </div>
+
             <div class="blog-grid"
-              style="display: grid; gap: 1rem; margin-top:1.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-              <a href="blog-storytelling.html" class="blog-card"
+              style="display: grid; gap: 1rem; margin-top:1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+              <!-- Blog 1 -->
+              <a href="blog-storytelling.html" class="blog-card" data-category="strategy"
                 style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <div
+                  style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">
+                  Strategie</div>
                 <h3
                   style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
                   Warum gutes Storytelling auf Social Media wichtiger ist als je zuvor</h3>
                 <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Reine Werbung reicht
                   nicht mehr aus. Ein Einblick in ehrliches Content Marketing.</p>
-                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                <span style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
                   lesen &rarr;</span>
               </a>
-              <a href="blog-video-editing-trends.html" class="blog-card"
+
+              <!-- Blog 2 -->
+              <a href="blog-video-editing-trends.html" class="blog-card" data-category="editing"
                 style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <div
+                  style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">
+                  Editing</div>
                 <h3
                   style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
                   3 Video-Editing Trends für 2026, die du kennen musst</h3>
                 <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Wie schnelle Schnitte
                   und visuelle Klarheit die Aufmerksamkeitsspanne dominieren.</p>
-                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                <span style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
                   lesen &rarr;</span>
               </a>
-              <a href="blog-markenaufbau.html" class="blog-card"
+
+              <!-- Blog 3 -->
+              <a href="blog-markenaufbau.html" class="blog-card" data-category="strategy"
                 style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <div
+                  style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">
+                  Strategie</div>
                 <h3
                   style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
                   Authentischer Markenaufbau durch Kurzvideos (Reels)</h3>
                 <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Mach deine Brand
                   greifbar – mit scroll-stoppendem Design und Fokus.</p>
-                <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                <span style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
                   lesen &rarr;</span>
               </a>
+
+              <!-- Blog 4 -->
+              <a href="blog-content-fehler.html" class="blog-card" data-category="strategy"
+                style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <div
+                  style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">
+                  Strategie</div>
+                <h3
+                  style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
+                  Die 5 größten Fehler bei der Content-Planung</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Warum unregelmäßiges
+                  Posten ohne System nicht wächst und wie du Struktur rein bringst.</p>
+                <span style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                  lesen &rarr;</span>
+              </a>
+
+              <!-- Blog 5 -->
+              <a href="blog-workflow.html" class="blog-card" data-category="editing"
+                style="padding: 1.5rem; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: var(--radius-card); text-decoration: none; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;">
+                <div
+                  style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-color); font-weight: 700; margin-bottom: 0.5rem;">
+                  Editing</div>
+                <h3
+                  style="color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-heading);">
+                  Wie ich meinen Video Editing Workflow halbiert habe</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Ein Blick über meine
+                  Schulter: Shortcuts, Pre-Sets und strukturierte Timelines.</p>
+                <span style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem; margin-top: auto;">Artikel
+                  lesen &rarr;</span>
+              </a>
+
             </div>
           </div>
         </section>
@@ -435,6 +491,35 @@
           localStorage.setItem('theme', 'light');
         }
       });
+
+      // Interactive Filter Logic
+      window.filterBlog = function (category) {
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.blog-card');
+
+        buttons.forEach(btn => {
+          if (btn.getAttribute('onclick') === `filterBlog('${category}')`) {
+            btn.style.background = 'var(--text-primary)';
+            btn.style.color = 'var(--bg-color)';
+            btn.style.borderColor = 'var(--text-primary)';
+          } else {
+            btn.style.background = 'transparent';
+            btn.style.color = 'var(--text-secondary)';
+            btn.style.borderColor = 'var(--card-border)';
+          }
+        });
+
+        cards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+            setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            setTimeout(() => { card.style.display = 'none'; }, 200);
+          }
+        });
+      };
     </script>
 </body>
 
