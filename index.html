@@ -55,7 +55,7 @@
   <script>
     // Prevent flickering by setting mode before rendering
     if (localStorage.getItem('theme') === 'light') {
-      document.documentElement.classList.add('light-mode-pre');
+      document.documentElement.classList.add('light-mode');
     }
   </script>
 </head>
@@ -314,16 +314,12 @@
 
     <script>
       const themeToggleBtn = document.getElementById('theme-toggle');
-      const body = document.body;
       const sunIcon = document.getElementById('sun-icon');
       const moonIcon = document.getElementById('moon-icon');
 
-      // Default to dark, but check local storage
       const currentTheme = localStorage.getItem('theme');
 
-      // Apply initial state without toggle animation
       if (currentTheme === 'light') {
-        body.classList.add('light-mode');
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
       } else {
@@ -332,11 +328,9 @@
       }
 
       themeToggleBtn.addEventListener('click', function () {
-        // Toggle class
-        body.classList.toggle('light-mode');
+        document.documentElement.classList.toggle('light-mode');
 
-        // Update icons & storage
-        if (body.classList.contains('light-mode')) {
+        if (document.documentElement.classList.contains('light-mode')) {
           sunIcon.style.display = 'block';
           moonIcon.style.display = 'none';
           localStorage.setItem('theme', 'light');

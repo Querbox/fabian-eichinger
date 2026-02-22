@@ -711,7 +711,7 @@ p {
 }
 
 /* --- LIGHT MODE OVERRIDES --- */
-body.light-mode, html.light-mode-pre body {
+html.light-mode body {
   --bg-color: #F4F4F6;
   --card-bg: rgba(255, 255, 255, 0.9);
   --card-border: rgba(0, 0, 0, 0.04);
