@@ -542,123 +542,7 @@ p {
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-
-  /* Increased breakpoint for better tablet/mobile transition */
-  body {
-    padding: 1rem;
-    background-size: 30px 30px;
-  }
-
-  .page-container {
-    width: 100%;
-    gap: 2.5rem;
-    /* More space between sections vertically */
-  }
-
-  /* Force Single Column Grid */
-  .content-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    /* Consistent spacing */
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Cards */
-  .hero-card,
-  .bento-item,
-  .card-section,
-  .about-card,
-  .personal-card,
-  .services-card,
-  .linkedin-card,
-  .resume-card,
-  .philosophy-card,
-  .footer-card {
-    grid-column: 1 / -1 !important;
-    /* Force full width */
-    width: 100%;
-    padding: 2rem 1.5rem !important;
-    /* Better padding */
-    margin-bottom: 0;
-    /* Grid handles gap */
-  }
-
-  /* Typography Checks */
-  .hero h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-  }
-
-  .hero-intro {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  p,
-  li {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    /* Better readability */
-  }
-
-  /* Service Grid - keep as grid but 1 col or 2 col depending on strictness */
-  .services-grid {
-    grid-template-columns: 1fr;
-    /* Force single column for services too on small screens */
-    gap: 1.5rem;
-  }
-
-  /* Resume Logos - Fix Squashing */
-  .resume-item {
-    flex-direction: column;
-    gap: 1.5rem;
-    /* More space between logo and content */
-    align-items: flex-start;
-  }
-
-  .resume-logo-wrapper {
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-  }
-
-  /* Ensure flex items don't overflow */
-  .resume-content {
-    width: 100%;
-  }
-
-  .resume-content h3 {
-    font-size: 1.3rem;
-  }
-
-  /* Marquee safety */
-  .marquee-content span {
-    font-size: 1rem;
-    margin-right: 1.5rem;
-  }
-
-  /* Footer safety */
-  .footer-nav {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .footer-nav a {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-  }
-}
+/* Legacy mobile base (merged into newer block below) */
 
 /* --- THEME TOGGLE BUTTON --- */
 .theme-toggle {
@@ -1134,12 +1018,38 @@ section h2 {
 
 /* Base Mobile Optimization for Linear Layout */
 @media (max-width: 768px) {
+
+  /* --- PREVENT OVERFLOW / ZOOM ISSUES --- */
+  body {
+    padding: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .page-wrapper,
+  .page-container,
+  .content-wrapper,
+  .about-section,
+  .about-content,
+  .resume-section,
+  .services-section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .content-wrapper {
+    gap: 3rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  /* --- NAV --- */
   .top-nav {
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 24px;
+    padding: 0.75rem;
+    gap: 0.75rem;
+    border-radius: 20px;
     align-items: stretch;
+    margin-top: 0.5rem;
   }
 
   .nav-links {
@@ -1147,32 +1057,41 @@ section h2 {
     overflow-x: auto;
     width: 100%;
     justify-content: flex-start;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    gap: 1.25rem;
+    gap: 0.75rem;
+    scrollbar-width: none;
   }
 
   .nav-links::-webkit-scrollbar {
     display: none;
   }
 
+  .nav-links a {
+    font-size: 0.82rem;
+    flex-shrink: 0;
+  }
+
   .top-nav .button-primary {
     text-align: center;
     width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* --- HERO --- */
+  .hero-section {
+    padding: 1.5rem 0;
   }
 
   .hero-section h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.15;
   }
 
-  .content-wrapper {
-    gap: 3.5rem;
-    padding-bottom: 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
+  .hero-intro {
+    font-size: 1rem;
   }
 
   .hero-actions {
@@ -1180,15 +1099,69 @@ section h2 {
     align-items: flex-start;
   }
 
-  /* Blog zigzag collapse */
+  /* --- SECTIONS --- */
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 1.25rem;
+  }
+
+  /* --- LINKEDIN --- */
+  .linkedin-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .linkedin-card h2 {
+    font-size: 1.3rem;
+  }
+
+  /* --- RESUME --- */
+  .resume-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .resume-skills {
+    margin: 0.75rem 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+
+  .resume-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .resume-content h3 {
+    font-size: 1.05rem;
+  }
+
+  /* --- BLOG CARDS GRID (homepage/blog overview) --- */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* --- BLOG ARTICLE ZIGZAG → SINGLE COLUMN --- */
   .blog-section.zigzag {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .blog-section.zigzag.zigzag--reverse .blog-section__text,
-  .blog-section.zigzag.zigzag--reverse .blog-section__visual {
-    order: unset;
+  /* Visual ALWAYS above text on mobile */
+  .blog-section.zigzag .blog-section__visual {
+    order: -1;
+  }
+
+  .blog-section.zigzag .blog-section__text {
+    order: 1;
   }
 
   .blog-section__visual {
@@ -1199,11 +1172,50 @@ section h2 {
   }
 
   .blog-hero h1 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+  }
+
+  .blog-byline {
+    font-size: 0.85rem;
   }
 
   .blog-callout {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  /* --- FAQ --- */
+  .faq-item h3 {
+    font-size: 1rem !important;
+  }
+
+  /* --- FOOTER --- */
+  .footer-card {
+    padding: 1.5rem 0;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .footer-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  /* --- THEME TOGGLE --- */
+  .theme-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 42px;
+    height: 42px;
+  }
+
+  .theme-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 
