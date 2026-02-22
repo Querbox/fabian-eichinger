@@ -54,8 +54,8 @@
     </script>
   <script>
     // Prevent flickering by setting mode before rendering
-    if (localStorage.getItem('theme') === 'light') {
-      document.documentElement.classList.add('light-mode');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark-mode');
     }
   </script>
 </head>
@@ -91,50 +91,56 @@
   <div class="page-wrapper">
     <div class="page-container">
 
-      <div class="bento-grid">
+      <div class="content-wrapper">
+
+        <!-- Navigation -->
+        <nav class="top-nav fade-in-up" style="--delay: 0.5;">
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="#portfolio">Work</a>
+                <a href="#ueber-mich">About</a>
+                <a href="#experience">CV</a>
+            </div>
+            <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Kontaktieren</a>
+        </nav>
 
         <!-- Hero Section -->
-        <header class="bento-item hero-card fade-in-up" style="--delay: 1;">
-          <div class="hero-image-wrapper floating-anim">
-            <!-- Placeholder color/image until user provides one -->
-            <!-- <div class="hero-placeholder">F</div> -->
+        <header class="hero-section fade-in-up" style="--delay: 1;">
+          <div class="hero-image-wrapper">
             <img src="images/fabi.jpg" alt="Fabian Eichinger" class="hero-img">
           </div>
-          <h1>Fabian Eichinger<br>Video & Social Media Content Creator</h1>
+          <h1>Hallo, ich bin Fabian Eichinger.<br>Video & Social Media Content Creator</h1>
           <p class="hero-intro">
-            Klarer Content. Modernes Design. Visuelles Storytelling.
+             Ich bin Video Content Creator mit Schwerpunkt auf Social Media, visuellen Konzepten und Storytelling. <br>
+             Klarer Content. Modernes Design. Visuelles Storytelling.
           </p>
+          <div class="hero-actions">
+            <a href="mailto:fabian.eichinger.privat@gmail.com" class="button-primary">Zusammenarbeiten</a>
+            <div class="availability-badge">
+              <span class="dot"></span> Verfügbar für neue Projekte
+            </div>
+          </div>
         </header>
 
-        <!-- Infinite Marquee Section -->
-        <div class="marquee-container fade-in-up" style="--delay: 1.5;">
-          <div class="marquee-content">
-            <span>VIDEO EDITING • SOCIAL MEDIA • STORYTELLING • CONTENT CREATION • STRATEGY • MOTION DESIGN • </span>
-            <span>VIDEO EDITING • SOCIAL MEDIA • STORYTELLING • CONTENT CREATION • STRATEGY • MOTION DESIGN • </span>
-          </div>
-        </div>
+        
 
         <!-- About Section -->
-        <section class="bento-item about-card fade-in-up" id="ueber-mich" style="--delay: 2;">
-          <h2>Über mich</h2>
-          <p>
-            Ich bin Video Content Creator mit Schwerpunkt auf Social Media. Ich unterstütze Marken und Unternehmen
-            dabei,
-            Inhalte zu erstellen, die authentisch wirken, verständlich sind und visuell überzeugen.
-          </p>
-        </section>
-
-        <!-- Personal Section (Dark Card) -->
-        <section class="bento-item personal-card fade-in-up" id="persoenlich" style="--delay: 3;">
-          <h2>Persönliche Note</h2>
-          <p>
-            Ich arbeite konzentriert, detailverliebt und ruhig. Mir ist wichtig, dass Content ehrlich wirkt
-            und nicht nach klassischer Werbung aussieht.
-          </p>
+        <section class="about-section fade-in-up" id="ueber-mich" style="--delay: 2;">
+          <div class="about-content">
+            <h2>Über mich</h2>
+            <p>
+              Ich bin Video Content Creator mit Schwerpunkt auf Social Media. Ich unterstütze Marken und Unternehmen
+              dabei, Inhalte zu erstellen, die authentisch wirken, verständlich sind und visuell überzeugen.
+            </p>
+            <p>
+              Ich arbeite konzentriert, detailverliebt und ruhig. Mir ist wichtig, dass Content ehrlich wirkt
+              und nicht nach klassischer Werbung aussieht.
+            </p>
+          </div>
         </section>
 
         <!-- Services Section -->
-        <section class="bento-item services-card fade-in-up" id="portfolio" style="--delay: 4;">
+        <section class="services-section fade-in-up" id="portfolio" style="--delay: 4;">
           <h2>Was ich mache</h2>
           <div class="services-grid">
             <div class="service-item">
@@ -156,16 +162,18 @@
           </div>
         </section>
 
-        <!-- LinkedIn Integration (Now before Resume) -->
-        <a href="https://www.linkedin.com/in/fabian-eichinger-video-content/recent-activity/all/" target="_blank"
-          class="bento-item linkedin-card fade-in-up" id="linkedin" style="--delay: 5;">
-          <h2>Aktuelles auf LinkedIn</h2>
-          <p>Entdecke meine neuesten Beiträge und Projekte.</p>
-          <span class="linkedin-btn">Zum Profil &rarr;</span>
-        </a>
+        <!-- LinkedIn Integration -->
+        <div class="linkedin-wrapper fade-in-up" style="--delay: 5;">
+            <a href="https://www.linkedin.com/in/fabian-eichinger-video-content/recent-activity/all/" target="_blank"
+              class="linkedin-card" id="linkedin">
+              <h2>Aktuelles auf LinkedIn</h2>
+              <p>Entdecke meine neuesten Beiträge und Projekte.</p>
+              <span class="linkedin-btn">Zum Profil &rarr;</span>
+            </a>
+        </div>
 
         <!-- Work Experience Section -->
-        <section class="bento-item resume-card fade-in-up" id="experience" style="--delay: 6;">
+        <section class="resume-section fade-in-up" id="experience" style="--delay: 3;">
           <h2>Berufserfahrung</h2>
           <div class="resume-list">
 
@@ -245,7 +253,7 @@
         </section>
 
         <!-- Education Section -->
-        <section class="bento-item resume-card fade-in-up" id="education" style="--delay: 7;">
+        <section class="resume-section fade-in-up" id="education" style="--delay: 5;">
           <h2>Ausbildung</h2>
           <div class="resume-list">
 
@@ -290,7 +298,7 @@
         </section>
 
         <!-- Philosophy Section -->
-        <section class="bento-item philosophy-card fade-in-up" id="haltung" style="--delay: 8;">
+        <section class="philosophy-section fade-in-up" id="haltung" style="--delay: 6;">
           <h2>Arbeitsweise</h2>
           <p><strong>Klarheit statt Überladung.</strong></p>
           <p><strong>Storytelling vor Effekten.</strong></p>
@@ -317,27 +325,28 @@
       const sunIcon = document.getElementById('sun-icon');
       const moonIcon = document.getElementById('moon-icon');
 
-      const currentTheme = localStorage.getItem('theme');
+      // Default is light
+      const currentTheme = localStorage.getItem('theme') || 'light';
 
-      if (currentTheme === 'light') {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-      } else {
+      if (currentTheme === 'dark') {
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'block';
+      } else {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
       }
 
       themeToggleBtn.addEventListener('click', function () {
-        document.documentElement.classList.toggle('light-mode');
+        document.documentElement.classList.toggle('dark-mode');
 
-        if (document.documentElement.classList.contains('light-mode')) {
-          sunIcon.style.display = 'block';
-          moonIcon.style.display = 'none';
-          localStorage.setItem('theme', 'light');
-        } else {
+        if (document.documentElement.classList.contains('dark-mode')) {
           sunIcon.style.display = 'none';
           moonIcon.style.display = 'block';
           localStorage.setItem('theme', 'dark');
+        } else {
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+          localStorage.setItem('theme', 'light');
         }
       });
     </script>

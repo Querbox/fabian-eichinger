@@ -236,36 +236,19 @@ body {
 }
 
 /* --- GRID LAYOUT & GLASS CARDS --- */
-.bento-grid {
+.content-wrapper {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
   /* More breathing room */
   grid-auto-rows: min-content;
 }
 
-.bento-item,
-.card-section {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: var(--radius-card);
-  padding: 3.5rem;
-  /* Spacious padding */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s var(--anim-ease);
-}
+
 
 /* Subtle Glow Hover */
-.bento-item:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.3);
-}
+
 
 /* --- HERO SECTION --- */
 .hero-card {
@@ -575,7 +558,7 @@ p {
   }
 
   /* Force Single Column Grid */
-  .bento-grid {
+  .content-wrapper {
     grid-template-columns: 1fr;
     gap: 2rem;
     /* Consistent spacing */
@@ -726,84 +709,358 @@ html.light-mode body {
   --accent-glow: rgba(255, 90, 0, 0.15);
 }
 
-body.light-mode .blob-1, html.light-mode-pre body .blob-1 {
+html.light-mode-ignore .blob-1, html.light-mode-pre body .blob-1 {
   background: #FF6600;
 }
-body.light-mode .blob-2, html.light-mode-pre body .blob-2 {
+html.light-mode-ignore .blob-2, html.light-mode-pre body .blob-2 {
   background: #FF8800; /* Yellow-Orange instead of red to avoid pink */
 }
-body.light-mode .blob-3, html.light-mode-pre body .blob-3 {
+html.light-mode-ignore .blob-3, html.light-mode-pre body .blob-3 {
   background: #FF9900;
 }
 
-body.light-mode .blob, html.light-mode-pre body .blob {
+html.light-mode-ignore .blob, html.light-mode-pre body .blob {
   opacity: 0.25;
   filter: blur(120px);
 }
 
-body.light-mode .marquee-container, html.light-mode-pre body .marquee-container {
+html.light-mode-ignore .marquee-container, html.light-mode-pre body .marquee-container {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode .bento-item, html.light-mode-pre body .bento-item,
-body.light-mode .card-section, html.light-mode-pre body .card-section {
+html.light-mode-ignore .bento-item, html.light-mode-pre body .bento-item,
+html.light-mode-ignore .card-section, html.light-mode-pre body .card-section {
   box-shadow: var(--card-shadow);
 }
 
-body.light-mode .bento-item:hover, html.light-mode-pre body .bento-item:hover {
+html.light-mode-ignore .bento-item:hover, html.light-mode-pre body .bento-item:hover {
   border-color: var(--accent-color);
   box-shadow: 0 20px 40px -10px rgba(255, 90, 0, 0.15);
 }
 
-body.light-mode .hero-image-wrapper, html.light-mode-pre body .hero-image-wrapper {
+html.light-mode-ignore .hero-image-wrapper, html.light-mode-pre body .hero-image-wrapper {
   border: 4px solid #FFFFFF;
 }
 
-body.light-mode .personal-card, html.light-mode-pre body .personal-card {
+html.light-mode-ignore .personal-card, html.light-mode-pre body .personal-card {
   background: linear-gradient(135deg, rgba(255, 90, 0, 0.08), rgba(255, 255, 255, 0.8));
 }
 
-body.light-mode .service-item, html.light-mode-pre body .service-item {
+html.light-mode-ignore .service-item, html.light-mode-pre body .service-item {
   background: rgba(0, 0, 0, 0.02);
 }
 
-body.light-mode .service-item:hover, html.light-mode-pre body .service-item:hover {
+html.light-mode-ignore .service-item:hover, html.light-mode-pre body .service-item:hover {
   background: #FFFFFF;
 }
 
-body.light-mode .linkedin-btn, html.light-mode-pre body .linkedin-btn {
+html.light-mode-ignore .linkedin-btn, html.light-mode-pre body .linkedin-btn {
   background: #FFFFFF;
   color: var(--accent-color);
 }
 
-body.light-mode .resume-item, html.light-mode-pre body .resume-item {
+html.light-mode-ignore .resume-item, html.light-mode-pre body .resume-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-body.light-mode .resume-skills, html.light-mode-pre body .resume-skills {
+html.light-mode-ignore .resume-skills, html.light-mode-pre body .resume-skills {
   background: rgba(0, 0, 0, 0.03);
   color: #444 !important;
 }
 
-body.light-mode .resume-quote, html.light-mode-pre body .resume-quote {
+html.light-mode-ignore .resume-quote, html.light-mode-pre body .resume-quote {
   color: #555 !important;
 }
 
-body.light-mode .footer-card, html.light-mode-pre body .footer-card {
+html.light-mode-ignore .footer-card, html.light-mode-pre body .footer-card {
   color: #777777;
 }
 
-body.light-mode .footer-nav, html.light-mode-pre body .footer-nav {
+html.light-mode-ignore .footer-nav, html.light-mode-pre body .footer-nav {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-body.light-mode .footer-nav a, html.light-mode-pre body .footer-nav a {
+html.light-mode-ignore .footer-nav a, html.light-mode-pre body .footer-nav a {
   color: #333333;
 }
 
-body.light-mode .footer-nav a:hover, html.light-mode-pre body .footer-nav a:hover {
+html.light-mode-ignore .footer-nav a:hover, html.light-mode-pre body .footer-nav a:hover {
   background-color: var(--accent-color);
   color: #FFF;
 }
+
+/* --- CLEAN MINIMAL LAYOUT (SCREENSHOT INSPIRED) --- */
+
+.content-wrapper {
+  max-width: 800px; /* Narrower column like the screenshot */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Base Light Mode Setup as Default for minimal look */
+:root {
+  --bg-color: #FAFAFA;
+  --card-bg: #FFFFFF;
+  --card-border: #EAEAEA;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --accent-color: #FF5A00; 
+  --radius-card: 16px;
+  --spacing-md: 2rem;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html.dark-mode body {
+  --bg-color: #080808;
+  --card-bg: #111111;
+  --card-border: #222222;
+  --text-primary: #FFFFFF;
+  --text-secondary: #AAAAAA;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: none; /* Removed tech grid */
+}
+
+.blob-cont { display: none; } /* Removed blobs for cleaner look */
+
+/* Nav */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 99px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--text-primary);
+}
+
+.button-primary {
+  background: #111111;
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.button-primary:hover {
+  background: var(--accent-color);
+  color: #FFFFFF;
+}
+
+html.dark-mode .button-primary {
+  background: #FFFFFF;
+  color: #111111;
+}
+
+html.dark-mode .button-primary:hover {
+  background: var(--accent-color);
+  color: #FFFFFF;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: left;
+  padding: 2rem 0;
+}
+
+.hero-image-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: none;
+  box-shadow: none;
+  animation: none; /* Removed floating */
+}
+
+.hero-section h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.availability-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+}
+
+/* Sections Base */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* About */
+.about-section p {
+  margin-bottom: 1rem;
+}
+
+/* Resume Lines Clean Up */
+.resume-section .resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resume-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.resume-logo-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+}
+
+.resume-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.resume-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+/* Services / Features */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.service-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1.5rem;
+  border-radius: var(--radius-card);
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* LinkedIn Integration */
+.linkedin-wrapper {
+  margin: 2rem 0;
+}
+
+.linkedin-card {
+  display: block;
+  background: var(--accent-color);
+  color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.linkedin-card h2 {
+  border: none;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.linkedin-card p {
+  color: rgba(255,255,255,0.9);
+}
+
+.linkedin-card:hover {
+  transform: scale(1.02);
+}
+
+.linkedin-btn {
+  display: inline-block;
+  background: #FFFFFF;
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+}
+
+/* Footer clean up */
+.footer-card {
+  border-top: 1px solid var(--card-border);
+  padding: 2rem 0;
+  text-align: center;
+  background: transparent;
+}
+
+/* Dark Mode logic swap in JS means we remove html.light-mode-ignore overrides and use html.dark-mode */
+/* (The original file had Dark as default. The user wants the screenshot as default which is Light) */
+
+
+/* Icons / Theme */
+.theme-toggle .theme-icon { stroke: var(--text-primary); }
