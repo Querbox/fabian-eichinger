@@ -61,47 +61,115 @@
         <div class="content-wrapper">
             <header class="card-section"
                 style="padding: 2rem 0; background: transparent; border: none; box-shadow: none;">
-                <a href="index.html" class="back-link"
+                <a href="blog.html" class="back-link"
                     style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">&larr; Zurück zur
-                    Startseite</a>
+                    Blog-Übersicht</a>
             </header>
 
             <section class="about-section" style="padding-top: 0;">
                 <div class="about-content">
-                    <h1
-                        style="font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-primary); font-family: var(--font-heading);">
-                        Die 5 größten Fehler bei der Content-Planung</h1>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Geschrieben von Fabian Eichinger |
-                        Content Strategy</p>
+                    <div class="blog-hero reveal">
+                        <h1>Die 5 größten Fehler bei der Content-Planung</h1>
+                        <p class="blog-byline">Geschrieben von Fabian Eichinger | Content Strategy</p>
+                        <p class="blog-intro">Jeder Unternehmer weiß: Social Media ist wichtig. Doch in der Realität sieht es oft so aus, dass
+                            am Freitagnachmittag hastig ein Foto aus dem Büro mit der Caption "Schönes Wochenende!" gepostet
+                            wird. Warum dieser Ansatz langfristig zum Scheitern verurteilt ist und welche 5 strategischen
+                            Fehler ich bei meinen Kunden immer wieder sehe.</p>
+                    </div>
 
-                    <p>Jeder Unternehmer weiß: Social Media ist wichtig. Doch in der Realität sieht es oft so aus, dass
-                        am Freitagnachmittag hastig ein Foto aus dem Büro mit der Caption "Schönes Wochenende!" gepostet
-                        wird. Warum dieser Ansatz langfristig zum Scheitern verurteilt ist und welche 5 strategischen
-                        Fehler ich bei meinen Kunden immer wieder sehe.</p>
+                    <div class="blog-section zigzag reveal">
+                        <div class="blog-section__text">
+                            <h2>Fehler 1: Mangelnde Zielgruppenkenntnis</h2>
+                            <p>Ein Video, das "für alle" gemacht ist, erreicht niemanden. Viele Posts sind zu generell. Du musst
+                                genau wissen: Was ist das konkrete Problem deines Kunden? Was nervt ihn in seinem Alltag? Wenn
+                                dein Video dieses Gefühl ansprechen kann, bleibt der Nutzer dran.</p>
+                        </div>
+                        <div class="blog-section__visual">
+                            <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Target circles -->
+                                <circle cx="85" cy="90" r="45" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.2"/>
+                                <circle cx="85" cy="90" r="32" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"/>
+                                <circle cx="85" cy="90" r="19" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+                                <circle cx="85" cy="90" r="6" fill="var(--accent-color)" opacity="0.6"/>
+                                <!-- Arrow missing the center -->
+                                <line x1="145" y1="40" x2="105" y2="68" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" class="svg-draw" style="stroke-dasharray:100;stroke-dashoffset:100;"/>
+                                <!-- Arrow head -->
+                                <polygon points="105,68 112,62 109,72" fill="var(--accent-color)" opacity="0.8"/>
+                                <!-- X mark near miss -->
+                                <line x1="100" y1="63" x2="110" y2="73" stroke="var(--accent-color)" stroke-width="1.5" opacity="0.5"/>
+                                <line x1="110" y1="63" x2="100" y2="73" stroke="var(--accent-color)" stroke-width="1.5" opacity="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                    <h2 style="font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem;">Fehler 1: Mangelnde
-                        Zielgruppenkenntnis</h2>
-                    <p>Ein Video, das "für alle" gemacht ist, erreicht niemanden. Viele Posts sind zu generell. Du musst
-                        genau wissen: Was ist das konkrete Problem deines Kunden? Was nervt ihn in seinem Alltag? Wenn
-                        dein Video dieses Gefühl ansprechen kann, bleibt der Nutzer dran.</p>
+                    <div class="blog-section zigzag zigzag--reverse reveal">
+                        <div class="blog-section__text">
+                            <h2>Fehler 2: Der "Post and Pray" Ansatz</h2>
+                            <p>Das Video wird veröffentlicht und danach schließt das Team die App. Fehler! Engagement entsteht
+                                erst, wenn du auf Kommentare antwortest, mit anderen Profilen interagierst und aktiv im
+                                Algorithmus teilnimmst. Dein Posting ist erst der Startpunkt der Arbeit.</p>
+                        </div>
+                        <div class="blog-section__visual">
+                            <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Phone outline -->
+                                <rect x="40" y="30" width="55" height="95" rx="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <rect x="46" y="42" width="43" height="70" rx="3" stroke="currentColor" stroke-width="1" fill="none" opacity="0.2"/>
+                                <!-- Send/upload arrow -->
+                                <line x1="67" y1="85" x2="67" y2="60" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="57,70 67,58 77,70" stroke="var(--accent-color)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- Hourglass / waiting -->
+                                <line x1="120" y1="55" x2="155" y2="55" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="120" y1="115" x2="155" y2="115" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M123 55 L123 70 Q137 90, 137 85 Q137 80, 152 70 L152 55" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M123 115 L123 100 Q137 80, 137 85 Q137 90, 152 100 L152 115" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <!-- Sand particles -->
+                                <circle cx="137" cy="85" r="2" fill="var(--accent-color)" opacity="0.6" class="svg-pulse"/>
+                                <circle cx="134" cy="100" r="1.5" fill="var(--accent-color)" opacity="0.4"/>
+                                <circle cx="140" cy="103" r="1.5" fill="var(--accent-color)" opacity="0.4"/>
+                                <circle cx="137" cy="107" r="1.5" fill="var(--accent-color)" opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                    <h2 style="font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem;">Fehler 2: Der "Post and
-                        Pray" Ansatz</h2>
-                    <p>Das Video wird veröffentlicht und danach schließt das Team die App. Fehler! Engagement entsteht
-                        erst, wenn du auf Kommentare antwortest, mit anderen Profilen interagierst und aktiv im
-                        Algorithmus teilnimmst. Dein Posting ist erst der Startpunkt der Arbeit.</p>
+                    <div class="blog-section zigzag reveal">
+                        <div class="blog-section__text">
+                            <h2>Fehler 3: Das Fehlen von Content-Säulen</h2>
+                            <p>Ohne Content-Pillars (thematische Säulen) wirkt ein Profil wirr. Definiere 3-4 Kernthemen, um die
+                                sich alles dreht. Zum Beispiel: "Wissensvermittlung", "Behind the Scenes/Culture", "Kunden-Case
+                                Studies". Das macht es dir extrem einfach, dir neue Ideen auszudenken.</p>
+                        </div>
+                        <div class="blog-section__visual">
+                            <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Base line -->
+                                <line x1="25" y1="145" x2="155" y2="145" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <!-- Pillar 1 (shortest) -->
+                                <rect x="35" y="95" width="28" height="50" rx="4" stroke="currentColor" stroke-width="2" fill="none" class="svg-float" style="animation-delay: 0s;"/>
+                                <rect x="35" y="95" width="28" height="50" rx="4" fill="var(--accent-color)" opacity="0.08"/>
+                                <!-- Lightbulb icon on pillar 1 -->
+                                <circle cx="49" cy="80" r="8" stroke="var(--accent-color)" stroke-width="1.5" fill="none"/>
+                                <line x1="46" y1="88" x2="52" y2="88" stroke="var(--accent-color)" stroke-width="1"/>
+                                <line x1="49" y1="72" x2="49" y2="68" stroke="var(--accent-color)" stroke-width="1"/>
+                                <!-- Pillar 2 (tallest) -->
+                                <rect x="76" y="65" width="28" height="80" rx="4" stroke="currentColor" stroke-width="2" fill="none" class="svg-float" style="animation-delay: 0.3s;"/>
+                                <rect x="76" y="65" width="28" height="80" rx="4" fill="var(--accent-color)" opacity="0.12"/>
+                                <!-- People icon on pillar 2 -->
+                                <circle cx="90" cy="48" r="6" stroke="var(--accent-color)" stroke-width="1.5" fill="none"/>
+                                <path d="M80 62 Q80 54, 90 52 Q100 54, 100 62" stroke="var(--accent-color)" stroke-width="1.5" fill="none"/>
+                                <!-- Pillar 3 (medium) -->
+                                <rect x="117" y="80" width="28" height="65" rx="4" stroke="currentColor" stroke-width="2" fill="none" class="svg-float" style="animation-delay: 0.6s;"/>
+                                <rect x="117" y="80" width="28" height="65" rx="4" fill="var(--accent-color)" opacity="0.1"/>
+                                <!-- Chart icon on pillar 3 -->
+                                <polyline points="123,72 128,64 133,68 140,58" stroke="var(--accent-color)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="140" cy="58" r="2" fill="var(--accent-color)" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                    <h2 style="font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem;">Fehler 3: Das Fehlen von
-                        Content-Säulen</h2>
-                    <p>Ohne Content-Pillars (thematische Säulen) wirkt ein Profil wirr. Definiere 3-4 Kernthemen, um die
-                        sich alles dreht. Zum Beispiel: "Wissensvermittlung", "Behind the Scenes/Culture", "Kunden-Case
-                        Studies". Das macht es dir extrem einfach, dir neue Ideen auszudenken.</p>
-
-                    <p
-                        style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border-left: 4px solid var(--accent-color); border-radius: 8px;">
-                        Die Lösung ist ein redaktionelles System: Plane in "Batches", also schreibe an einem Tag alle
-                        Skripte, drehe am zweiten Tag alle Videos und schneide am dritten. Das eliminiert den ständigen
-                        Alltags-Stress.</p>
+                    <div class="blog-callout reveal">
+                        <p>Die Lösung ist ein redaktionelles System: Plane in "Batches", also schreibe an einem Tag alle
+                            Skripte, drehe am zweiten Tag alle Videos und schneide am dritten. Das eliminiert den ständigen
+                            Alltags-Stress.</p>
+                    </div>
                 </div>
             </section>
 
@@ -145,6 +213,21 @@
                 localStorage.setItem('theme', 'light');
             }
         });
+
+        // Scroll-triggered reveal
+        (function() {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+            reveals.forEach(function(el) { observer.observe(el); });
+        })();
     </script>
 </body>
 
