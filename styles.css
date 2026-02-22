@@ -1376,6 +1376,58 @@ section h2 {
   animation-play-state: paused;
 }
 
+/* --- BLOG ARTICLE MOBILE (must come AFTER desktop blog styles) --- */
+@media (max-width: 768px) {
+  .blog-section.zigzag {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Visual ALWAYS above text on mobile */
+  .blog-section.zigzag .blog-section__visual {
+    order: -1;
+  }
+
+  .blog-section.zigzag .blog-section__text {
+    order: 1;
+  }
+
+  .blog-section.zigzag.zigzag--reverse .blog-section__text {
+    order: 1;
+  }
+
+  .blog-section.zigzag.zigzag--reverse .blog-section__visual {
+    order: -1;
+  }
+
+  .blog-section__visual {
+    max-width: 200px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    padding: 1.5rem;
+  }
+
+  .blog-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .blog-byline {
+    font-size: 0.85rem;
+  }
+
+  .blog-callout {
+    padding: 1.25rem;
+  }
+
+  .blog-section__text h2 {
+    font-size: 1.2rem;
+  }
+
+  .blog-section__text p {
+    font-size: 0.95rem;
+  }
+}
+
 /* --- ACCESSIBILITY --- */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
