@@ -93,6 +93,47 @@
   padding: 0;
 }
 
+/* --- SKIP TO CONTENT (Accessibility) --- */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* --- FOCUS STYLES (Keyboard Accessibility) --- */
+*:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.theme-toggle:focus-visible {
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+a:focus-visible {
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline-offset: 2px;
+}
+
 body {
   background-color: var(--bg-color);
   background-image:

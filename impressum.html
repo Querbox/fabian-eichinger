@@ -21,6 +21,8 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a>
+
     <!-- Theme Toggle -->
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
         <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -44,14 +46,14 @@
 
     <div class="page-container">
         <div class="content-wrapper">
-            <header class="card-section"
+            <nav aria-label="Breadcrumb" class="card-section"
                 style="padding: 2rem 0; background: transparent; border: none; box-shadow: none;">
                 <a href="/" class="back-link"
                     style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">&larr; Zurück zur
                     Startseite</a>
-            </header>
+            </nav>
 
-            <main class="about-section" style="padding-top: 0;">
+            <main id="main-content" class="about-section" style="padding-top: 0;">
                 <div class="about-content">
                     <h1
                         style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-primary); font-family: var(--font-heading);">
@@ -85,10 +87,10 @@
                 <p>&copy;
                     <script>document.write(new Date().getFullYear())</script> Fabian Eichinger
                 </p>
-                <div class="footer-nav">
+                <nav class="footer-nav" aria-label="Rechtliche Links">
                     <a href="impressum">Impressum</a>
                     <a href="datenschutz">Datenschutz</a>
-                </div>
+                </nav>
             </footer>
         </div>
     </div>
@@ -98,27 +100,27 @@
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
 
-        const currentTheme = localStorage.getItem('theme');
+        const currentTheme = localStorage.getItem('theme') || 'light';
 
-        if (currentTheme === 'light') {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        } else {
+        if (currentTheme === 'dark') {
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
+        } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
         }
 
         themeToggleBtn.addEventListener('click', function () {
-            document.documentElement.classList.toggle('light-mode');
+            document.documentElement.classList.toggle('dark-mode');
 
-            if (document.documentElement.classList.contains('light-mode')) {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-                localStorage.setItem('theme', 'light');
-            } else {
+            if (document.documentElement.classList.contains('dark-mode')) {
                 sunIcon.style.display = 'none';
                 moonIcon.style.display = 'block';
                 localStorage.setItem('theme', 'dark');
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                localStorage.setItem('theme', 'light');
             }
         });
     </script>
