@@ -1094,12 +1094,12 @@ body {
 
 /* --- SUBPAGE SECTION (blog listing) --- */
 .section--subpage {
-  padding-top: 8rem;
+  padding-top: 10rem;
 }
 
 @media (max-width: 768px) {
   .section--subpage {
-    padding-top: 5rem;
+    padding-top: 6.5rem;
   }
 }
 
